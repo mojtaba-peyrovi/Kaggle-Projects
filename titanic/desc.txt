@@ -1,0 +1,21 @@
+Titanic (Kaggle) 
+
+df.columns.values ==> shows the column names in the dataset.
+there is a big difference between Categorical features and Ordinal features. 
+categorical features are just categories and don't have any special meaning. 
+Ordinal features: the different values have different meannings. for example; Pclass: 1,2,3  
+the difference between 1,2 is not the same as the difference between 2,3
+label encoding:
+1) sklearn and padas have different methods for converting alphabetical values to numerical. 
+sklearn.preprocessing.LabelEncoder  will assign 1,2,3,... to real values based on their alphabetical order. 
+2) pandas.factorize: will assign them based on which value from the top is seen earlier.
+3) frequency encoding:  it will assign float values (percentage) to values based on their frequency. e.g. 0.2, 0.4, 0.5.
+we can do it this way: from scipy.stats import rankdata.
+we need to convert categorical values to different columns numerical. 
+1) panas.get_dummies
+2) sklearn.preprocessing.OneHotEncoder.
+
+- we need to check which feature has mixed (numerical , alphanumeric) data types.
+- df.describe() has inclue argument: 
+cab be: include='all'  or a list of data types:   include = ['O'] ===> O means objects
+- historgram is good to be used for continuous numerical features.
