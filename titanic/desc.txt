@@ -12,7 +12,7 @@ sklearn.preprocessing.LabelEncoder  will assign 1,2,3,... to real values based o
 3) frequency encoding:  it will assign float values (percentage) to values based on their frequency. e.g. 0.2, 0.4, 0.5.
 we can do it this way: from scipy.stats import rankdata.
 we need to convert categorical values to different columns numerical. 
-1) panas.get_dummies
+1) pandas.get_dummies
 2) sklearn.preprocessing.OneHotEncoder.
 
 - we need to check which feature has mixed (numerical , alphanumeric) data types.
